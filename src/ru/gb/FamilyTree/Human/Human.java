@@ -1,12 +1,10 @@
 package ru.gb.FamilyTree.Human;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
-public class Human implements Serializable {
+public class Human implements Comparable<Human> {
     private String name;
     private LocalDate dob, dod;
     private Gender gender;
@@ -21,6 +19,14 @@ public class Human implements Serializable {
         children = new ArrayList<>();
         this.mother = mother;
         this.father = father;
+    }
+    public int getAge() {
+        if(dod != null) {
+            return dod.getYear() - dob.getYear();
+        }
+        else {
+            return LocalDate.now().getYear() - dob.getYear();
+        }
     }
 
     public String getName() {
@@ -109,9 +115,9 @@ public class Human implements Serializable {
         sb.append(" Дети- ");
         sb.append(getChildrenInfo());
         sb.append(" Мать- ");
-        sb.append(getMother());
+        sb.append(getGlobalInfo(mother));
         sb.append(" Отец- ");
-        sb.append(getFather());
+        sb.append(getGlobalInfo(father));
         return sb.toString();
     }
 
@@ -123,6 +129,32 @@ public class Human implements Serializable {
         return sb.toString();
 
     }
+
+//    public String getMotherInfo() {
+//        StringBuilder sb = new StringBuilder();
+//        if(mother != null) {
+//            sb.append(mother.getName()).append(" ").append(mother.getDob());
+//            return sb.toString();
+//        }
+//        return null;
+//    }
+
+    public String getGlobalInfo(Human field) {
+        StringBuilder sb = new StringBuilder();
+        if(field != null) {
+            sb.append(field.getName()).append(" ").append(field.getDob());
+            return sb.toString();
+        }
+        return "Данные отсутствуют  ";
+    }
+
+
+    @Override
+    public int compareTo(Human o) {
+        return name.compareTo(o.name);
+    }
+
+
 
 
 }

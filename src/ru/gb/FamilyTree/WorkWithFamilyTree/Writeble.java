@@ -1,9 +1,5 @@
-package ru.gb.FamilyTree.FileHandler;
+package ru.gb.FamilyTree.WorkWithFamilyTree;
 
-import ru.gb.FamilyTree.Human.Human;
-
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.Serializable;
 
 public interface Writeble {

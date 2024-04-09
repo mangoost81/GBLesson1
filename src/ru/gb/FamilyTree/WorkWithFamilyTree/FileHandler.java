@@ -1,6 +1,4 @@
-package ru.gb.FamilyTree.FileHandler;
-
-import ru.gb.FamilyTree.FamilyTree.FamilyTree;
+package ru.gb.FamilyTree.WorkWithFamilyTree;
 
 import java.io.*;
 
