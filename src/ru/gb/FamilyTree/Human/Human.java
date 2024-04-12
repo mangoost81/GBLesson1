@@ -1,10 +1,12 @@
 package ru.gb.FamilyTree.Human;
 
+import ru.gb.FamilyTree.WorkWithFamilyTree.FamilyTreeElem;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Human implements Comparable<Human> {
+public class Human implements Comparable<Human>,FamilyTreeElem<Human> {
     private String name;
     private LocalDate dob, dod;
     private Gender gender;

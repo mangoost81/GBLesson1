@@ -3,6 +3,7 @@ package ru.gb.FamilyTree;
 import ru.gb.FamilyTree.FamilyTree.FamilyTree;
 import ru.gb.FamilyTree.Human.Gender;
 import ru.gb.FamilyTree.Human.Human;
+import ru.gb.FamilyTree.WorkWithFamilyTree.FamilyTreeElem;
 import ru.gb.FamilyTree.WorkWithFamilyTree.HumanComporator;
 
 import java.io.*;
@@ -42,6 +43,8 @@ public class Main {
         boris.addChild(nataly);
         margo.addChild(nataly);
         alexandr.addChild(dmitry);
+
+
         familyTree.addMember(dmitry);
         familyTree.addMember(valery);
         familyTree.addMember(alina);
