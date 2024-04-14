@@ -2,17 +2,20 @@ package ru.gb.study_group.View;
 
 import ru.gb.study_group.Presenter.Presenter;
 
+import javax.xml.transform.Source;
 import java.util.Scanner;
 
 public class Console implements View {
     private Scanner scanner;
     private Presenter presenter;
     private boolean status;
+    private MainMenu mainMenu;
 
     public Console() {
         scanner = new Scanner(System.in);
         presenter = new Presenter(this);
         status = true;
+        mainMenu = new MainMenu (this);
     }
 
     @Override
@@ -20,53 +23,32 @@ public class Console implements View {
         System.out.println("Выберите действие: ");
 
         while (status) {
-            System.out.println("1. Добавить студента.");
-            System.out.println("2. Получить список студентов.");
-            System.out.println("3. Отсортировать по имени.");
-            System.out.println("4. Отсортировать по возрасту.");
-            System.out.println("5. Закончить работу.");
-
-            String line = scanner.nextLine();
-            switch (line) {
-                case "1":
-                    addStudent();
-                    break;
-                case "2":
-                    getstudentListInfo();
-                    break;
-                case "3":
-                    sortByName();
-                    break;
-                case "4":
-                    sortByAge();
-                    break;
-                case "5":
-                    finish();
-                    break;
-                default:
-                    System.out.println("Incorrect input. ");
-            }
+            System.out.println(mainMenu.getMenu());
+            String strChoice = scanner.nextLine();
+            // check for validation input values
+            int choice = Integer.parseInt(strChoice);
+            mainMenu.execute(choice);
         }
     }
 
-    private void finish() {
+    public void finish() {
         status = false;
         System.out.println("До свидания.");
     }
 
-    private void sortByAge() {
+    public void sortByAge() {
         presenter.sortByAge();
     }
 
-    private void sortByName() {
+    public void sortByName() {
          presenter.sortByName();
     }
 
-    private void getstudentListInfo() {
+    public void getstudentListInfo() {
         presenter.getStudentsInfo();
     }
 
-    private void addStudent() {
+    public void addStudent() {
         System.out.println("Введите имя студента. ");
         String name = scanner.nextLine();
 
