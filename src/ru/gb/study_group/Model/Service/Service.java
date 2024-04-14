@@ -1,6 +1,7 @@
-package ru.gb.study_group;
+package ru.gb.study_group.Model.Service;
 
-import java.util.Collections;
+import ru.gb.study_group.Model.Student.Students;
+import ru.gb.study_group.Model.Study_Group.StudyGroup;
 
 public class Service {
     private int genId;

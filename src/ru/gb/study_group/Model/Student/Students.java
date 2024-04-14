@@ -1,4 +1,4 @@
-package ru.gb.study_group;
+package ru.gb.study_group.Model.Student;
 
 public class Students implements Comparable<Students> {
     private String name;

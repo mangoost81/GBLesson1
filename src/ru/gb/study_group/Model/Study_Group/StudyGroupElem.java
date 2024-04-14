@@ -1,4 +1,4 @@
-package ru.gb.study_group;
+package ru.gb.study_group.Model.Study_Group;
 
 public interface StudyGroupElem {
     String getName();

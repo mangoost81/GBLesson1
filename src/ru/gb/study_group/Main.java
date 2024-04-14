@@ -1,19 +1,14 @@
 package ru.gb.study_group;
 
+import ru.gb.study_group.Model.Service.Service;
+import ru.gb.study_group.View.Console;
+import ru.gb.study_group.View.View;
+
 public class Main {
     public static void main(String[] args) {
-        Service service = new Service();
-        service.addStudent("Bob", 19);
-        service.addStudent("Max", 20);
-        service.addStudent("Ted", 17);
-        service.addStudent("Mary", 20);
-        service.addStudent("Helen", 19);
-
-        System.out.println(service.getStudentsInfo());
-        service.sortByName();
-        System.out.println(service.getStudentsInfo());
-        service.sortByAge();
-        System.out.println(service.getStudentsInfo());
+        View view = new Console();
+        Console console = new Console();
+        view.start();
 
     }
 }

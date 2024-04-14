@@ -1,4 +1,6 @@
-package ru.gb.study_group;
+package ru.gb.study_group.Model.Student.Comporator;
+
+import ru.gb.study_group.Model.Study_Group.StudyGroupElem;
 
 import java.util.Comparator;
 
