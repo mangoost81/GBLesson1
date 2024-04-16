@@ -1,6 +1,6 @@
-package ru.gb.FamilyTree.WorkWithFamilyTree;
+package ru.gb.FamilyTree.Model.WorkWithFamilyTree.Iterators;
 
-import ru.gb.FamilyTree.Human.Human;
+import ru.gb.FamilyTree.Model.WorkWithFamilyTree.FamilyTreeElem;
 
 import java.util.Iterator;
 import java.util.List;

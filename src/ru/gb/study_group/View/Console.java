@@ -2,7 +2,6 @@ package ru.gb.study_group.View;
 
 import ru.gb.study_group.Presenter.Presenter;
 
-import javax.xml.transform.Source;
 import java.util.Scanner;
 
 public class Console implements View {

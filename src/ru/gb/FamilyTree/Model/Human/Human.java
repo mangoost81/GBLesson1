@@ -1,12 +1,12 @@
-package ru.gb.FamilyTree.Human;
+package ru.gb.FamilyTree.Model.Human;
 
-import ru.gb.FamilyTree.WorkWithFamilyTree.FamilyTreeElem;
+import ru.gb.FamilyTree.Model.WorkWithFamilyTree.FamilyTreeElem;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Human implements Comparable<Human>,FamilyTreeElem<Human> {
+public class Human implements Comparable<Human>, FamilyTreeElem<Human> {
     private String name;
     private LocalDate dob, dod;
     private Gender gender;
@@ -22,11 +22,18 @@ public class Human implements Comparable<Human>,FamilyTreeElem<Human> {
         this.mother = mother;
         this.father = father;
     }
+
+    public Human(String name, LocalDate dob, Gender gender) {
+        this.name = name;
+        this.dob = dob;
+        this.gender = gender;
+    }
+
+
     public int getAge() {
-        if(dod != null) {
+        if (dod != null) {
             return dod.getYear() - dob.getYear();
-        }
-        else {
+        } else {
             return LocalDate.now().getYear() - dob.getYear();
         }
     }
@@ -132,18 +139,11 @@ public class Human implements Comparable<Human>,FamilyTreeElem<Human> {
 
     }
 
-//    public String getMotherInfo() {
-//        StringBuilder sb = new StringBuilder();
-//        if(mother != null) {
-//            sb.append(mother.getName()).append(" ").append(mother.getDob());
-//            return sb.toString();
-//        }
-//        return null;
-//    }
+
 
     public String getGlobalInfo(Human field) {
         StringBuilder sb = new StringBuilder();
-        if(field != null) {
+        if (field != null) {
             sb.append(field.getName()).append(" ").append(field.getDob());
             return sb.toString();
         }
@@ -155,8 +155,6 @@ public class Human implements Comparable<Human>,FamilyTreeElem<Human> {
     public int compareTo(Human o) {
         return name.compareTo(o.name);
     }
-
-
 
 
 }

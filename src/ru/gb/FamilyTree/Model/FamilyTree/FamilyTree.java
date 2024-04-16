@@ -1,7 +1,9 @@
-package ru.gb.FamilyTree.FamilyTree;
+package ru.gb.FamilyTree.Model.FamilyTree;
 
-import ru.gb.FamilyTree.Human.Human;
-import ru.gb.FamilyTree.WorkWithFamilyTree.*;
+import ru.gb.FamilyTree.Model.WorkWithFamilyTree.*;
+import ru.gb.FamilyTree.Model.WorkWithFamilyTree.Comporators.FamilyTreeComporatorByAge;
+import ru.gb.FamilyTree.Model.WorkWithFamilyTree.Comporators.FamilyTreeComporatorByName;
+import ru.gb.FamilyTree.Model.WorkWithFamilyTree.Iterators.FamilyTreeIterator;
 
 import java.io.Serializable;
 import java.util.ArrayList;

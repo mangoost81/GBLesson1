@@ -1,10 +1,8 @@
 package ru.gb.FamilyTree;
 
-import ru.gb.FamilyTree.FamilyTree.FamilyTree;
-import ru.gb.FamilyTree.Human.Gender;
-import ru.gb.FamilyTree.Human.Human;
-import ru.gb.FamilyTree.WorkWithFamilyTree.FamilyTreeElem;
-import ru.gb.FamilyTree.WorkWithFamilyTree.HumanComporator;
+import ru.gb.FamilyTree.Model.FamilyTree.FamilyTree;
+import ru.gb.FamilyTree.Model.Human.Gender;
+import ru.gb.FamilyTree.Model.Human.Human;
 
 import java.io.*;
 import java.time.LocalDate;

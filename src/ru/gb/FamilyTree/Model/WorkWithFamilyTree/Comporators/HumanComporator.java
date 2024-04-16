@@ -1,6 +1,6 @@
-package ru.gb.FamilyTree.WorkWithFamilyTree;
+package ru.gb.FamilyTree.Model.WorkWithFamilyTree.Comporators;
 
-import ru.gb.FamilyTree.Human.Human;
+import ru.gb.FamilyTree.Model.Human.Human;
 
 import java.util.Comparator;
 

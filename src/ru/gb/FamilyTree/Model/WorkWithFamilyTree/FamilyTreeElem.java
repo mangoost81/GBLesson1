@@ -1,4 +1,4 @@
-package ru.gb.FamilyTree.WorkWithFamilyTree;
+package ru.gb.FamilyTree.Model.WorkWithFamilyTree;
 
 public interface FamilyTreeElem<E> {
     String getName();
